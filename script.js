@@ -113,23 +113,27 @@ bottomClick.addEventListener("click",()=>{
     
     //to empty text
     textContent.value="";
+    descrption.value="";
     getArray();
 })
 document.addEventListener("click",(e)=>{
         if (e.target.className == "delete"){
             e.target.parentElement.remove(); 
+            getArray()
         }
         if (e.target.className == "delAll"){
             showingSpace.innerHTML="";
+            getArray()
         }
         if (e.target.className == "edit"){
             e.target.parentElement.firstChild.removeAttribute("disabled");
+            getArray()
         }
         if (e.target.className == "done"){
             e.target.parentElement.firstChild.setAttribute('disabled', true);
-    
+            getArray()
         }
-    })
+    })  
 
 
     function getArray(){
@@ -140,7 +144,7 @@ document.addEventListener("click",(e)=>{
 
     let boxesArray =[];
     boxes.forEach((box)=>{
-     boxesArray.push({"title": box.firstChild.value, "time":box.lastChild.innerText, "desc":box.childNodes[1].value });
+     boxesArray.push({"title": box.firstChild.value, "time":box.lastChild.innerText, "desc":box.childNodes[1].value, "isComplete":"uncompleted" });
     })
     localStorage.setItem("tpDoList",JSON.stringify(boxesArray));
     }
