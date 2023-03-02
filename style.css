@@ -3,21 +3,28 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    color: aliceblue;
+
+}
 
 section{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(to right bottom, rgb(37, 35, 35),#383737);
+
 }
 .container{
-    padding: 4%;
+    padding: 3%;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-    height: 100vh;
     width: 95%;
 }
 .title{
     text-align: center;
+    color: aliceblue;
+    letter-spacing: 2px;
 }
 .form{
     margin-top: 20px;
@@ -29,9 +36,14 @@ section{
 }
 
 .inpUserValue{
-    padding: 10px 5px;
+    border: 1px solid;
+    padding: 10px 8px;
     font-size: 17px;
     outline-width: 0;
+    border: 1px solid #6b90e4;
+    border-radius: 20px;
+    background-color: #383737;
+    color: #f5f5f5;
 }
 
 .btns{
@@ -45,29 +57,36 @@ section{
     border: none;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    color: burlywood;
+    background-color: black;
+    font-weight: 600;
 }
 
 .sub{
-    background-color: green;
-    color: #fff ;
+    /* background-color: green; */
+    /* color: #fff ; */
     font-weight: 700;
 }
 
 .showResult{
     margin-top: 50px;
+    min-height: 100vh;
 }
 .parentBox{
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-    padding: 10px 0px;
+    gap: 15px;
+    box-shadow: 0px 10px 20px rgba(43, 72, 86, 0.3);
+    padding: 10px 8px;
+    width: 100%;
+    margin-top: 30px;
 }
 
 .inputBtn{
     padding: 10px 5px;
-    outline-width: 0;
-    border: none;
+    border: 1px solid #8EC3B0;
+    color: burlywood;
+    background-color: black;
 }
 
 .edit,.done,.delete{
@@ -80,13 +99,24 @@ section{
 }
 
 .edit{
-    background-color: blue;
-    color: #fff;
+    background-color: #6b90e4;
+    color: aliceblue
 }
 .delete{
     background-color: red;
     color: #fff;
 }
 .done{
-    background-color: yellow;
+    background-color: #f0dd0a;
+}
+
+.parentBox{
+    margin-top: 20px;
+    /* background-color: #BCEAD5; */
+
+}
+
+.parentBox p{
+    font-size: 14px;
+    /* color: #ccc; */
 }
